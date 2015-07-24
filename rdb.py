@@ -132,8 +132,8 @@ class Rdb(Pdb):
             raise Exception(NO_AVAILABLE_PORT.format(self=self))
 
     def say(self, m):
-        # print(m, file=self.out)
-        pass
+        print(m, file=self.out)
+        self.out.flush()
 
     def _close_session(self):
         self.stdin, self.stdout = sys.stdin, sys.stdout = self._prev_handles

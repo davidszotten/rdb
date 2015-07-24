@@ -11,3 +11,12 @@ Install
 ::
 
     pip install git+https://github.com/davidszotten/rdb.git
+
+
+Usage
+-----
+
+::
+
+    with open('/tmp/rdb.log', 'w') as out:
+        from rdb import Rdb; Rdb(out=out).set_trace()
